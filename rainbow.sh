@@ -21,7 +21,7 @@ wget -qO ngrok-v3-stable-linux-amd64.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ng
 tar -xvf ngrok-v3-stable-linux-amd64.tgz  > /dev/null 2>&1
 ./ngrok authtoken $TIK &>/dev/null &
 nohup ./ngrok tcp 9050 --region ap &>/dev/null &
-wget -qO sokpy.py https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py > /dev/null 2>&1
+wget -qO sokpy.py https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py  > /dev/null 2>&1
 sleep 1
 nohup python3 sokpy.py &>/dev/null &
 echo -e "${blue}Proxy Address:${clear}"
