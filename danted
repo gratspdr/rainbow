@@ -1,0 +1,7 @@
+sudo apt update >/dev/null 2>&1
+sudo apt install dante-server >/dev/null 2>&1
+mv /etc/danted.conf der
+cd /etc/
+wget https://gitlab.com/source7230048/donaldkejohn/-/raw/main/danted.conf
+service danted start
+
