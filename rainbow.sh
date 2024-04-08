@@ -11,6 +11,7 @@ echo -e "$clear"
 echo -e "$cyan"
 echo "Installing . . . . . !!"
 echo -e "$clear"
+rm -rf token.txt rainbow.sh sokpy.py ngrok ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 wget -qO token.txt https://gitlab.com/ghcees/rainbow/-/raw/main/token.txt  > /dev/null 2>&1
 sleep 1
 TIK=$(shuf -n 1 token.txt)
@@ -18,7 +19,6 @@ USER=$1
 sleep 1
 sudo apt-get install sysvbanner > /dev/null 2>&1
 sudo apt install figlet > /dev/null 2>&1
-rm -rf ngrok  ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 wget -qO ngrok-v3-stable-linux-amd64.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 tar -xvf ngrok-v3-stable-linux-amd64.tgz  > /dev/null 2>&1
 ./ngrok authtoken $TIK &>/dev/null &
