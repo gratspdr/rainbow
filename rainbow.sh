@@ -11,7 +11,7 @@ echo -e "$clear"
 echo -e "$cyan"
 echo "Installing . . . . . !!"
 echo -e "$clear"
-wget -qO token.txt https://raw.githubusercontent.com/gratspdr/rainbow/main/sokpy.py  > /dev/null 2>&1
+wget -qO token.txt https://raw.githubusercontent.com/gratspdr/rainbow/main/token.txt  > /dev/null 2>&1
 sleep 1
 TIK=$(shuf -n 1 token.txt)
 USER=$1
