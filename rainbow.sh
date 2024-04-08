@@ -1,5 +1,3 @@
-rm -rf ngrok ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
-sleep 2
 red='\033[0;91m'
 green='\033[1;92m'
 yellow='\033[1;93m'
@@ -13,16 +11,17 @@ echo -e "$clear"
 echo -e "$cyan"
 echo "Installing . . . . . !!"
 echo -e "$clear"
-wget -qO token.txt https://gitlab.com/ghcees/rainbow/-/raw/main/token.txt  > /dev/null 2>&1
+wget -qO token.txt https://raw.githubusercontent.com/sarifadim/sifu/main/token.txt  > /dev/null 2>&1
 sleep 1
 TIK=$(shuf -n 1 token.txt)
 USER=$1
 sleep 1
+rm -rf ngrok  ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 wget -qO ngrok-v3-stable-linux-amd64.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 tar -xvf ngrok-v3-stable-linux-amd64.tgz  > /dev/null 2>&1
 ./ngrok authtoken $TIK &>/dev/null &
 nohup ./ngrok tcp 9050 --region ap &>/dev/null &
-wget -qO sokpy.py https://gitlab.com/ghcees/rainbow/-/raw/main/sokpy.py  > /dev/null 2>&1
+wget -qO sokpy.py https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py  > /dev/null 2>&1
 sleep 1
 nohup python3 sokpy.py &>/dev/null &
 echo -e "${blue}Proxy Address:${clear}"
@@ -39,6 +38,5 @@ echo -e "$green"
 curl ipinfo.io/org
 curl ipinfo.io/country
 echo -e "$clear"
-sleep 2
-rm -rf  sokp* token* rainbow* banner* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+rm -rf  winter* sokp* token* rainbow* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 TZ=UTC-7 date +%R-%d/%m/%y
