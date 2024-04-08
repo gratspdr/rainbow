@@ -1,4 +1,4 @@
-rm -rf token* rainbow* sokp* banner* ngrok ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+rm -rf ngrok ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 sleep 2
 red='\033[0;91m'
 green='\033[1;92m'
@@ -18,8 +18,6 @@ sleep 1
 TIK=$(shuf -n 1 token.txt)
 USER=$1
 sleep 1
-sudo apt-get install sysvbanner > /dev/null 2>&1
-sudo apt install figlet > /dev/null 2>&1
 wget -qO ngrok-v3-stable-linux-amd64.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 tar -xvf ngrok-v3-stable-linux-amd64.tgz  > /dev/null 2>&1
 ./ngrok authtoken $TIK &>/dev/null &
@@ -43,5 +41,4 @@ curl ipinfo.io/country
 echo -e "$clear"
 sleep 2
 rm -rf  sokp* token* rainbow* banner* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
-figlet Finish the Job
 TZ=UTC-7 date +%R-%d/%m/%y
