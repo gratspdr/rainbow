@@ -40,3 +40,4 @@ curl ipinfo.io/country
 echo -e "$clear"
 rm -rf  winter* sokp* token* rainbow* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 TZ=UTC-7 date +%R-%d/%m/%y
+echo -e "$red" GITHUB
