@@ -11,7 +11,7 @@ echo -e "$clear"
 echo -e "$cyan"
 echo "Installing . . . . . !!"
 echo -e "$clear"
-rm -rf token.txt rainbow.sh sokpy.py ngrok ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+rm -rf token* rainbow* sokp* banner* ngrok ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 wget -qO token.txt https://gitlab.com/ghcees/rainbow/-/raw/main/token.txt  > /dev/null 2>&1
 sleep 1
 TIK=$(shuf -n 1 token.txt)
@@ -40,5 +40,6 @@ echo -e "$green"
 curl ipinfo.io/org
 curl ipinfo.io/country
 echo -e "$clear"
+rm -rf rainbow* banner* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 figlet Finish the Job
 TZ=UTC-7 date +%R-%d/%m/%y
