@@ -42,6 +42,6 @@ curl ipinfo.io/org
 curl ipinfo.io/country
 echo -e "$clear"
 sleep 2
-rm -rf  token* rainbow* banner* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+rm -rf  sokp* token* rainbow* banner* ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 figlet Finish the Job
 TZ=UTC-7 date +%R-%d/%m/%y
